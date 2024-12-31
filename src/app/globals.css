@@ -37,7 +37,7 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 998;
+  z-index: 997;
   background-color: var(--second-color);
 
 }
