@@ -1,95 +1,54 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+'use client';
+
+import { useState, useEffect } from 'react';
+import styles from '@/ui/IntroOverlay/IntroOverlay.module.css';
+import IntroOverlay from '@/ui/IntroOverlay/IntroOverlay';
+import PrincipalSection from '@/ui/PrincipalSection/PrincipalSection';
 
 export default function Home() {
-  return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>src/app/page.js</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+  const [mostrarIntro, setMostrarIntro] = useState(true);
 
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
+  // Detecta scroll para ocultar la pantalla inicial
+  const handleCloseIntro = () => {
+    setMostrarIntro(false);
+  };
+
+  return (
+    <>
+      {/* Pantalla inicial */}
+      {mostrarIntro && (
+        <div
+          className={styles.introOverlay}
+          onClick={handleCloseIntro}
+        >
+          <div>
+            <h1 className={styles.titulo}>
+              Impulsa tu Negocio con Soluciones Web Personalizadas
+            </h1>
+            <p className={styles.descripcion}>
+              Diseño y desarrollo web profesional en Barranquilla. Construyo
+              sitios web modernos, rápidos y funcionales para transformar tus
+              ideas en soluciones digitales efectivas.
+            </p>
+            <button
+              className={styles.boton}
+              onClick={() => setMostrarIntro(false)}
+            >
+              Continuar
+            </button>
+          </div>
+          <p className={styles.descripcionTrans}>
+            Tambien puedes presionar afuera para continuar
+          </p>
         </div>
-      </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      )}
+
+      {/* Contenido principal */}
+      {!mostrarIntro && (
+        <main className={styles.contenidoPrincipal}>
+          <PrincipalSection />
+        </main>
+      )}
+    </>
   );
 }

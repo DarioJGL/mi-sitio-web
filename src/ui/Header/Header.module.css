@@ -1,0 +1,159 @@
+.logo-imagen {
+    display: block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.logo-titulo {
+    display: block;
+    font-size: 1.5rem;
+    color: white;
+    text-decoration: none;
+}
+
+/* Barra de navegación */
+.barra-navegacion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    color: white;
+    position: relative;
+}
+
+.enlaces-navegacion {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--second-color);
+    width: 100%;
+    z-index: 100;
+    transition: all 0.3s ease-in-out;
+    opacity: 0.95;
+}
+
+.enlaces-navegacion .enlace {
+    text-align: center;
+    padding: 1rem 0;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.enlaces-navegacion .enlace:hover {
+
+    color: var(--third-color-darker);
+}
+
+.link {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s ease-in-out;
+}
+
+
+
+.oculto {
+    display: none;
+}
+
+.click {
+    color: var(--third-color);
+}
+
+
+/* Botón hamburguesa */
+.boton-hamburguesa {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    scale: 1.1;
+}
+
+.boton-hamburguesa:focus {
+    transform: scale(1.1);
+}
+
+.boton-hamburguesa:focus .span {
+    background-color: var(--third-color-darker);
+}
+
+.boton-hamburguesa .span {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    border-radius: 3px;
+}
+
+
+.activo {
+    display: flex;
+}
+
+@media (min-width: 768px) {
+
+    .logo-imagen {
+        display: block;
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+    }
+
+    .barra-navegacion {
+        flex-wrap: nowrap;
+        justify-content: space-around;
+    }
+
+    .enlaces-navegacion {
+        display: flex;
+        flex-direction: row;
+        position: static;
+        background: none;
+        width: auto;
+        gap: 1rem;
+    }
+
+    .link {
+        padding: 0.3rem 1rem;
+        transition: background-color 0.5s step-start;
+    }
+
+    .link:hover {
+        padding: 0.3rem 1rem;
+        background-color: var(--third-color-darker);
+        border-radius: 1rem;
+    }
+
+    .click {
+        color: var(--font-main-color);
+        padding: 0.3rem 1rem;
+        background-color: var(--third-color);
+        border-radius: 1rem;
+    }
+
+
+    .link-oculto {
+        display: none;
+    }
+
+    .oculto {
+        display: block;
+    }
+
+    .boton-hamburguesa {
+        display: none;
+    }
+
+    .redes-sociales {
+        gap: 2.5rem;
+    }
+
+}
