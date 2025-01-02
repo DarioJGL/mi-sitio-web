@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import Link from 'next/link';
+import Button from '@/ui/Button/Button.jsx';
 import styles from './PrincipalSection.module.css';
 
 export default function PrincipalSection() {
@@ -16,12 +16,12 @@ export default function PrincipalSection() {
           web, aplicaciones personalizadas y soluciones tecnológicas modernas
           para impulsar tu negocio.
         </p>
-        <Link
-          className={styles.boton}
+        <Button
+          text="Contactanos"
+          type="button"
           href="https://wa.me/573028072004?text=Hola,%20me%20gustaría%20saber%20más%20sobre%20tus%20servicios"
-        >
-          Contactanos
-        </Link>
+          className={styles.boton}
+        />
       </div>
 
       <div className={styles.imagen}>

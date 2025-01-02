@@ -2,8 +2,12 @@
 
 import { useState, useEffect } from 'react';
 import styles from '@/ui/IntroOverlay/IntroOverlay.module.css';
-import IntroOverlay from '@/ui/IntroOverlay/IntroOverlay';
 import PrincipalSection from '@/ui/PrincipalSection/PrincipalSection';
+import ServicesSection from '@/ui/ServicesSection/ServicesSection';
+import Opiniones from '@/ui/Opiniones/Opiniones';
+import Cta from '@/ui/Cta/Cta';
+import Footer from '@/ui/Footer/Footer';
+import Button from '@/ui/Button/Button';
 
 export default function Home() {
   const [mostrarIntro, setMostrarIntro] = useState(true);
@@ -30,12 +34,10 @@ export default function Home() {
               sitios web modernos, rápidos y funcionales para transformar tus
               ideas en soluciones digitales efectivas.
             </p>
-            <button
-              className={styles.boton}
+            <Button
               onClick={() => setMostrarIntro(false)}
-            >
-              Continuar
-            </button>
+              text="Conocer más"
+            />
           </div>
           <p className={styles.descripcionTrans}>
             Tambien puedes presionar afuera para continuar
@@ -47,6 +49,10 @@ export default function Home() {
       {!mostrarIntro && (
         <main className={styles.contenidoPrincipal}>
           <PrincipalSection />
+          <ServicesSection />
+          <Opiniones />
+          <Cta />
+          <Footer />
         </main>
       )}
     </>

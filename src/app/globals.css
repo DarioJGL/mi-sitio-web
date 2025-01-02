@@ -2,6 +2,7 @@
   color: var(--font-main-color);
   --main-color: #080a14;
   --second-color: #261172;
+  --second-color-darker: #1f0f5b;
   --third-color: #0d9e73;
   --third-color-darker: #0a7e5d;
   --font-main-color: #eaedf7;
@@ -53,7 +54,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: var(--font-main);
+  font-family: var(--font-titillium-web);
   font-weight: 700;
 }
 
@@ -61,7 +62,14 @@ p,
 code,
 pre,
 .monospace {
-  font-family: var(--font-secondary);
+  font-family: var(--font-roboto-mono);
+}
+
+
+footer {
+
+  border-top: 1px solid var(--third-color-darker);
+
 }
 
 @media (min-width: 768px) {

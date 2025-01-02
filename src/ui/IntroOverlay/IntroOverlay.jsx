@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import Button from '@/ui/Button/Button';
 import styles from './IntroOverlay.module.css';
 
 export default function IntroOverlay() {
@@ -28,12 +29,6 @@ export default function IntroOverlay() {
             Desarrollo sitios web profesionales y aplicaciones a medida para
             impulsar tus proyectos.
           </p>
-          <button
-            className={styles.boton}
-            onClick={() => setMostrarIntro(false)}
-          >
-            Continuar
-          </button>
         </div>
       )}
 

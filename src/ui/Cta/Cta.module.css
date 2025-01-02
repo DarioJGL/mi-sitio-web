@@ -1,0 +1,21 @@
+.cta {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.boton {
+    font-size: 1rem;
+}
+
+@media (width > 768px) {
+    .boton {
+        font-size: 1.2rem;
+    }
+}
