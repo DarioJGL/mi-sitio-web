@@ -34,7 +34,7 @@
 
 /* Estilos para el título, descripción y botón */
 .titulo {
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: bold;
     margin-bottom: 1rem;
     font-family: var(--font-titillium-web);
@@ -42,7 +42,7 @@
 }
 
 .descripcion {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     text-align: center;
     margin-bottom: 2rem;
     font-family: var(--font-roboto-mono);

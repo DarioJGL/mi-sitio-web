@@ -2,6 +2,7 @@ import { Titillium_Web, Roboto_Mono } from 'next/font/google';
 import './globals.css';
 import Header from '@/ui/Header/Header.jsx';
 import Footer from '@/ui/Footer/Footer.jsx';
+import { Analytics } from '@vercel/analytics/react';
 
 const titilliumWeb = Titillium_Web({
   variable: '--font-titillium-web',
@@ -18,12 +19,13 @@ const robotoMono = Roboto_Mono({
 export const metadata = {
   title: 'DevGuti - Desarrollo de Software en Barranquilla',
   description:
-    'Servicios freelance de desarrollo de software en Barranquilla. Diseño web, aplicaciones personalizadas y soluciones tecnológicas modernas para impulsar tu negocio.',
+    'Servicios de desarrollo de software en Barranquilla. Diseño web, aplicaciones personalizadas y soluciones tecnológicas modernas para impulsar tu negocio.',
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="es">
+      <Analytics />
       <body
         className={`${titilliumWeb.variable} ${robotoMono.variable} antialiased`}
       >
