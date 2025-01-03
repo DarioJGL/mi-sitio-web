@@ -1,6 +1,7 @@
 import { Titillium_Web, Roboto_Mono } from 'next/font/google';
 import './globals.css';
 import Header from '@/ui/Header/Header.jsx';
+import Footer from '@/ui/Footer/Footer.jsx';
 
 const titilliumWeb = Titillium_Web({
   variable: '--font-titillium-web',
@@ -28,6 +29,7 @@ export default function RootLayout({ children }) {
       >
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );

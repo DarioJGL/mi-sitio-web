@@ -2,13 +2,18 @@
     background-color: var(--second-color);
     color: var(--font-main-color);
     padding: 2rem;
+
+    margin: 0 auto;
+    margin-top: 3rem;
+
+}
+
+.footerContent {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 1.5rem;
     max-width: 1200px;
     margin: 0 auto;
-    margin-top: 3rem;
-
 }
 
 .Section {
@@ -16,6 +21,7 @@
     flex-direction: column;
     align-items: center;
 }
+
 
 .title {
     font-weight: bold;

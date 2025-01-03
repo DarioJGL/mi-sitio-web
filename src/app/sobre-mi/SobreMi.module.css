@@ -1,0 +1,22 @@
+.aboutMe {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1.5rem;
+}
+
+@media (width > 768px) {
+    .aboutMe {
+        flex-direction: row;
+        gap: 2rem;
+    }
+}
+
+@media (width > 1500px) {
+    .aboutMe {
+        gap: 3rem;
+        padding-top: 5rem;
+    }
+}

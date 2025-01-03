@@ -1,12 +1,11 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useLayoutEffect } from 'react';
 import styles from '@/ui/IntroOverlay/IntroOverlay.module.css';
 import PrincipalSection from '@/ui/PrincipalSection/PrincipalSection';
 import ServicesSection from '@/ui/ServicesSection/ServicesSection';
 import Opiniones from '@/ui/Opiniones/Opiniones';
 import Cta from '@/ui/Cta/Cta';
-import Footer from '@/ui/Footer/Footer';
 import Button from '@/ui/Button/Button';
 
 export default function Home() {
@@ -52,7 +51,6 @@ export default function Home() {
           <ServicesSection />
           <Opiniones />
           <Cta />
-          <Footer />
         </main>
       )}
     </>

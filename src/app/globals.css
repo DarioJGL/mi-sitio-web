@@ -5,6 +5,7 @@
   --second-color-darker: #1f0f5b;
   --third-color: #0d9e73;
   --third-color-darker: #0a7e5d;
+  --third-color-rgb: rgb(20, 255, 180);
   --font-main-color: #eaedf7;
   --font-main: var(--font-titillium-web);
   --font-secondary: var(--font-roboto-mono);
@@ -39,6 +40,9 @@ header {
   left: 0;
   width: 100%;
   z-index: 997;
+  background: url(../../public/blurry-header.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
   background-color: var(--second-color);
 
 }
@@ -67,6 +71,11 @@ pre,
 
 
 footer {
+  background: hsla(253, 72%, 21%, 1);
+  background: radial-gradient(circle, hsla(253, 72%, 21%, 1) 0%, hsla(207, 58%, 4%, 1) 100%);
+  background: -moz-radial-gradient(circle, hsla(253, 72%, 21%, 1) 0%, hsla(207, 58%, 4%, 1) 100%);
+  background: -webkit-radial-gradient(circle, hsla(253, 72%, 21%, 1) 0%, hsla(207, 58%, 4%, 1) 100%);
+  filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#1F0F5B", endColorstr="#040A0F", GradientType=1);
 
   border-top: 1px solid var(--third-color-darker);
 

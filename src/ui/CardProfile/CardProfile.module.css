@@ -1,0 +1,122 @@
+.cardProfile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 1rem;
+    background: url(../../../public/blurry-gradient.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: var(--second-color);
+
+    max-width: 350px;
+    padding: 1.7rem;
+    padding-top: 2rem;
+    transition: all ease-in-out 0.5s;
+    justify-content: space-evenly;
+    gap: 1rem;
+
+    box-shadow: 0 1px 10px rgba(20, 255, 180, 0.1),
+        0 0 10px rgba(20, 255, 180, 0.1),
+        0 0 10px rgba(20, 255, 180, 0.1);
+
+}
+
+.cardProfileInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.cardProfileTitle {
+    color: var(--font-main-color);
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 0.5rem;
+}
+
+.cardProfileProfesion {
+    color: #8e919a;
+    font-weight: bold;
+}
+
+.imgLogo {
+    background-color: var(--second-color);
+    padding: 0.5rem;
+    margin: 1rem;
+    border-radius: 10px;
+    transition: all ease-in-out 0.5s;
+}
+
+.imgLogo:hover {
+    background-color: var(--third-color);
+    scale: 1.1;
+}
+
+.divContact {
+    display: grid;
+    width: 100%;
+}
+
+.divContactCard {
+    display: flex;
+    flex-direction: row;
+    align-content: flex-start;
+    width: 100%;
+    text-align: start;
+}
+
+.divIcon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0.5rem;
+}
+
+.imgLogoContact {
+    background-color: var(--second-color);
+    padding: 0.5rem;
+    border-radius: 35px;
+}
+
+.line {
+    border-top: 1px solid var(--font-main-color);
+    margin: 0.5rem 0;
+    width: 100%;
+}
+
+.divButton {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.buttonContact {
+    width: fit-content;
+    margin-top: 0.5rem;
+    font-size: 1.2rem;
+}
+
+/* Pantallas de mas de 1500px */
+
+@media (width > 1500px) {
+    .cardProfile {
+        max-width: 400px;
+    }
+
+    .cardProfileTitle {
+        font-size: 2.5rem;
+    }
+
+    .imgLogo {
+        border-radius: 15px;
+    }
+
+    .imgLogoContact {
+        border-radius: 40px;
+    }
+}

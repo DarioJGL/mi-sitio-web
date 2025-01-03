@@ -1,0 +1,130 @@
+.card-profile-description {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    border-radius: 1rem;
+    background: url(../../../public/blurry-gradient.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: var(--second-color);
+    padding: 1rem 2rem;
+    max-width: 500px;
+
+    box-shadow: 0 1px 10px rgba(20, 255, 180, 0.1),
+        0 0 10px rgba(20, 255, 180, 0.1),
+        0 0 10px rgba(20, 255, 180, 0.1);
+
+}
+
+.card-profile-description__title {
+    color: var(--font-main-color);
+    font-size: 1.5rem;
+
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 1rem;
+}
+
+.card-profile-description__text {
+    color: var(--font-main-color);
+    font-size: 0.9rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-bottom: 1rem;
+}
+
+.div-knowledges {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+    grid-gap: 1rem;
+}
+
+.div-knowledges__target h4 {
+    color: var(--font-main-color);
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 1rem;
+}
+
+.div-knowledges__target div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.4rem;
+}
+
+.div-knowledges__target p {
+    color: var(--third-color);
+    background: transparent;
+    border: 1px solid var(--third-color);
+    border-radius: 7rem;
+    padding: 0 0.4rem;
+}
+
+.div-knowledges__target p:hover {
+    background: var(--third-color);
+    color: var(--font-main-color);
+    filter: brightness(80%);
+    cursor: default;
+}
+
+.div-knowledges__item {
+    grid-column: span 2;
+    flex-direction: column;
+    text-align: center;
+}
+
+.div-knowledges__item div {
+    display: flex;
+    width: 242px;
+    margin: auto;
+}
+
+@media (width > 1500px) {
+    .card-profile-description {
+        padding: 3rem 4rem;
+    }
+
+
+    .div-knowledges__target div {
+        gap: 0.6rem;
+    }
+
+    .div-knowledges__item div {
+        width: 300px;
+    }
+
+    .div-knowledges__target p {
+        padding: 0 0.6rem;
+    }
+
+    .card-profile-description__title {
+        font-size: 2rem;
+    }
+
+    .card-profile-description__text {
+        font-size: 1rem;
+    }
+
+    .div-knowledges__target h4 {
+        font-size: 1.2rem;
+    }
+
+    .div-knowledges__target p {
+        padding: 0 0.6rem;
+    }
+
+    .div-knowledges__item div {
+        width: 300px;
+    }
+
+    .div-knowledges__target p {
+        padding: 0 0.6rem;
+    }
+
+
+}

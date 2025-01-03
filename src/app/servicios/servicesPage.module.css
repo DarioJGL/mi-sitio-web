@@ -1,0 +1,214 @@
+.main {
+    padding: 4rem 2rem;
+    min-height: 100vh;
+    background-color: var(--main-color);
+}
+
+.hero {
+    text-align: center;
+    margin-bottom: 4rem;
+    max-width: 800px;
+    margin: 0 auto 6rem auto;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    color: var(--font-main-color);
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.heroSubtitle {
+    font-size: 1.5rem;
+    color: var(--third-color);
+    margin-bottom: 1rem;
+}
+
+.heroDescription {
+    color: var(--font-main-color);
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+.serviciosContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
+}
+
+.categoriaServicios {
+    margin-bottom: 2rem;
+}
+
+.categoriaServicios h2 {
+    color: var(--third-color);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.categoriaDescripcion {
+    color: var(--font-main-color);
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+.serviciosGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.servicioCard {
+    background: url(../../../public/blurry-gradient.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: var(--second-color);
+    padding: 2rem;
+    border-radius: 1rem;
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+}
+
+.servicioCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 2px 10px rgba(20, 255, 180, 0.1),
+        0 0 10px rgba(20, 255, 180, 0.1),
+        0 0 10px rgba(20, 255, 180, 0.1);
+}
+
+.servicioCard h3 {
+    color: var(--font-main-color);
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.servicioCard p {
+    color: var(--font-main-color);
+
+}
+
+.caracteristicas {
+    margin-top: 0.5rem;
+}
+
+.caracteristicas h4 {
+    color: var(--third-color);
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.caracteristicas ul {
+    list-style: none;
+    padding: 0;
+}
+
+.caracteristicas li {
+    color: var(--font-main-color);
+    margin-bottom: 0.8rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.caracteristicas li::before {
+    content: "→";
+    color: var(--third-color);
+    position: absolute;
+    left: 0;
+}
+
+.metadata {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.metadata p {
+    color: var(--font-main-color);
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.metadata span {
+    color: var(--third-color);
+    font-weight: 600;
+}
+
+div .btn {
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+@media (width > 1500px) {
+    .hero h1 {
+        font-size: 4rem;
+    }
+
+    .heroSubtitle {
+        font-size: 1.8rem;
+    }
+
+    .heroDescription {
+        font-size: 1.2rem;
+    }
+
+    .categoriaServicios h2 {
+        font-size: 2.5rem;
+    }
+
+    .servicioCard {
+        padding: 3rem;
+    }
+
+    .servicioCard h3 {
+        font-size: 1.8rem;
+    }
+
+    .caracteristicas h4 {
+        font-size: 1.4rem;
+    }
+
+    .metadata {
+        margin-top: 3rem;
+    }
+
+    .btn {
+        text-align: center;
+        font-size: 1.5rem;
+    }
+
+}
+
+@media (width < 768px) {
+    .main {
+        padding: 2rem 1rem;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .serviciosGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .servicioCard {
+        padding: 1.5rem;
+    }
+
+
+    .btn {
+        text-align: center;
+        font-size: 1rem;
+    }
+
+}
