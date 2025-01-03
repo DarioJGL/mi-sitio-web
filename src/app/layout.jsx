@@ -3,6 +3,7 @@ import './globals.css';
 import Header from '@/ui/Header/Header.jsx';
 import Footer from '@/ui/Footer/Footer.jsx';
 import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 const titilliumWeb = Titillium_Web({
   variable: '--font-titillium-web',
@@ -26,6 +27,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="es">
       <Analytics />
+      <SpeedInsights />
       <body
         className={`${titilliumWeb.variable} ${robotoMono.variable} antialiased`}
       >
