@@ -189,9 +189,6 @@ div .btn {
 }
 
 @media (width < 768px) {
-    .main {
-        padding: 2rem 1rem;
-    }
 
     .hero h1 {
         font-size: 2.5rem;

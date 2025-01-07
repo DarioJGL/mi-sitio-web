@@ -81,13 +81,7 @@ footer {
 
 }
 
-@media (min-width: 768px) {
 
-  main {
-    margin-top: 130px;
-  }
-
-}
 
 ::-webkit-scrollbar {
   width: 10px;

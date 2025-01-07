@@ -31,7 +31,7 @@ export default function Footer() {
           <ul>
             <li>
               Email:{' '}
-              <a href="mailto:contacto@devguti.site">contacto@devguti.site</a>
+              <a href="mailto:contacto@devguti.site">dariojgl0211@gmail.com</a>
             </li>
             <li>
               Teléfono: <a href="tel:+573028072004">+57 302 807 2004</a>

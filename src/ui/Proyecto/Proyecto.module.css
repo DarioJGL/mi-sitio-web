@@ -1,0 +1,76 @@
+.proyect {
+    background-color: var(--second-color);
+    border-radius: 10px;
+    transition: transform 0.5s;
+    width: 100%;
+
+}
+
+.proyect h3 {
+    text-align: center;
+    font-size: 1.2rem;
+    margin: 0;
+    padding: 0.7rem;
+    color: var(--font-main-color);
+    font-family: var(--font-roboto-mono);
+}
+
+.fondoProyect {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 16/9;
+
+}
+
+.proyect:hover .fondoProyect {
+    opacity: 0.5;
+    transition: opacity 0.5s;
+}
+
+.proyect:hover {
+    transform: scale(1.07);
+    transition: transform 0.5s;
+}
+
+.divLogosProyect {
+    display: none;
+}
+
+.proyect:hover .divLogosProyect {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+}
+
+.divLogosProyect a {
+    opacity: 1;
+}
+
+.imgLogo {
+    background-color: var(--second-color);
+    padding: 0.5rem;
+    margin: 2rem;
+    border-radius: 10px;
+    transition: all ease-in-out 0.5s;
+    width: 35px;
+    height: 35px;
+}
+
+.imgLogo:hover {
+    background-color: var(--third-color);
+    scale: 1.1;
+}
+
+@media (width > 768px) {
+
+
+    .proyect h3 {
+        font-size: 1.5rem;
+    }
+
+
+}
