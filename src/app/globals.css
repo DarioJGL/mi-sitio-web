@@ -48,7 +48,7 @@ header {
 }
 
 main {
-  margin-top: 100px;
+  margin-top: 120px;
 
 }
 
@@ -78,6 +78,13 @@ footer {
   filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#1F0F5B", endColorstr="#040A0F", GradientType=1);
 
   border-top: 1px solid var(--third-color-darker);
+
+}
+
+@media (width > 1200px) {
+  main {
+    margin-top: 120px;
+  }
 
 }
 

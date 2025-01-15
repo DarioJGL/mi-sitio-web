@@ -16,16 +16,35 @@ export default function Header() {
 
   useEffect(() => {
     const handleClickOutside = (event) => {
-      if (!event.target.closest(styles['barra-navegacion'])) {
+      // Verificar si estamos en móvil (usando la misma medida que en el CSS)
+      const isMobile = window.innerWidth < 768;
+
+      if (!isMobile) return; // Solo ejecutar en móvil
+
+      const nav = document.querySelector('[class*="enlaces-navegacion"]');
+      const hamburger = document.querySelector('[class*="boton-hamburguesa"]');
+
+      // Si el menú está AmenuActivo y el click no fue en el menú ni en el botón hamburguesa
+      if (
+        menuActivo &&
+        nav &&
+        !nav.contains(event.target) &&
+        !hamburger.contains(event.target)
+      ) {
         setMenuActivo(false);
       }
     };
 
-    document.addEventListener(styles['click'], handleClickOutside);
+    // Agregar el listener cuando el menú está AmenuActivo
+    if (menuActivo) {
+      document.addEventListener('mousedown', handleClickOutside);
+    }
 
-    return () =>
-      document.removeEventListener(styles['click'], handleClickOutside);
-  }, []);
+    // Cleanup: remover el listener cuando el componente se desmonta o el menú se cierra
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [menuActivo]);
 
   const links = [
     {
@@ -89,7 +108,7 @@ export default function Header() {
         {/* Enlaces de navegación */}
         <ul
           className={`${styles['enlaces-navegacion']} ${
-            menuActivo ? styles['activo'] : ''
+            menuActivo ? styles.activo : ''
           }`}
         >
           {links.map((link) => (
