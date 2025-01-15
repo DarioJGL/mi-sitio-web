@@ -12,6 +12,7 @@ export const metadata = {
 const servicios = [
   {
     id: 1,
+    idName: 'diseno-web',
     categoria: 'Desarrollo Web',
     descripcionCategoria:
       'Desarrollo web en Barranquilla, creamos experiencias digitales modernas y efectivas.',
@@ -50,6 +51,7 @@ const servicios = [
   },
   {
     id: 2,
+    idName: 'desarrollo-aplicaciones',
     categoria: 'Desarrollo de Aplicaciones',
     descripcionCategoria:
       'Desarrollamos aplicaciones móviles y web para empresas del Caribe colombiano.',
@@ -88,6 +90,7 @@ const servicios = [
   },
   {
     id: 3,
+    idName: 'software-a-medida',
     categoria: 'Software Empresarial',
     descripcionCategoria:
       'Soluciones de software a medida para empresas del Atlántico.',
@@ -126,6 +129,7 @@ const servicios = [
   },
   {
     id: 4,
+    idName: 'seo',
     categoria: 'Marketing Digital',
     descripcionCategoria:
       'Estrategias digitales para empresas de Barranquilla y el Caribe.',
@@ -164,7 +168,7 @@ const servicios = [
   },
 ];
 
-export default function Servicios() {
+export default function Servicios({}) {
   return (
     <main className={styles.main}>
       <section className={styles.hero}>
@@ -185,7 +189,7 @@ export default function Servicios() {
               key={categoria.id}
               className={styles.categoriaServicios}
             >
-              <h2>{categoria.categoria}</h2>
+              <h2 id={categoria.idName}>{categoria.categoria}</h2>
               <p className={styles.categoriaDescripcion}>
                 {categoria.descripcionCategoria}
               </p>
